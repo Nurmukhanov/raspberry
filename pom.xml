@@ -8,6 +8,13 @@
     <artifactId>raspberry</artifactId>
     <version>1.0</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>net.sf.bluecove</groupId>
+            <artifactId>bluecove</artifactId>
+            <version>2.1.0</version>
+        </dependency>
+    </dependencies>
     <build>
         <plugins>
             <plugin>
@@ -23,11 +30,4 @@
             </plugin>
         </plugins>
     </build>
-    <dependencies>
-        <dependency>
-            <groupId>net.sf.bluecove</groupId>
-            <artifactId>bluecove</artifactId>
-            <version>2.1.0</version>
-        </dependency>
-    </dependencies>
 </project>
