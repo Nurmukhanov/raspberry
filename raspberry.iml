@@ -12,5 +12,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: net.sf.bluecove:bluecove:2.1.0" level="project" />
+    <orderEntry type="library" name="Maven: net.sf.bluecove:bluecove-parent:2.1.0" level="project" />
+    <orderEntry type="library" name="Maven: net.sf.bluecove:bluecove-gpl:2.1.0" level="project" />
   </component>
 </module>

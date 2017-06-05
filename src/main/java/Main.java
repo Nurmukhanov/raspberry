@@ -1,53 +1,17 @@
-import javax.bluetooth.*;
+import javax.bluetooth.DiscoveryAgent;
+import javax.bluetooth.LocalDevice;
+import javax.bluetooth.RemoteDevice;
 import java.io.IOException;
-import java.util.Vector;
 
 /**
- * Created by olzhas on 04.06.17.
+ * Created by olzhas on 06.06.17.
  */
-
 public class Main {
-    public static final Vector/*<RemoteDevice>*/ devicesDiscovered = new Vector();
-
-    public static void main(String[] args) throws IOException, InterruptedException {
-
-        final Object inquiryCompletedEvent = new Object();
-
-        devicesDiscovered.clear();
-
-        DiscoveryListener listener = new DiscoveryListener() {
-
-            public void deviceDiscovered(RemoteDevice btDevice, DeviceClass cod) {
-                System.out.println("Device " + btDevice.getBluetoothAddress() + " found");
-                devicesDiscovered.addElement(btDevice);
-                try {
-                    System.out.println("     name " + btDevice.getFriendlyName(false));
-                } catch (IOException cantGetDeviceName) {
-                }
-            }
-
-            public void inquiryCompleted(int discType) {
-                System.out.println("Device Inquiry completed!");
-                synchronized(inquiryCompletedEvent){
-                    inquiryCompletedEvent.notifyAll();
-                }
-            }
-
-            public void serviceSearchCompleted(int transID, int respCode) {
-            }
-
-            public void servicesDiscovered(int transID, ServiceRecord[] servRecord) {
-            }
-        };
-
-        synchronized(inquiryCompletedEvent) {
-            boolean started = LocalDevice.getLocalDevice().getDiscoveryAgent().startInquiry(DiscoveryAgent.GIAC, listener);
-            if (started) {
-                System.out.println("wait for device inquiry to complete...");
-                inquiryCompletedEvent.wait();
-                System.out.println(devicesDiscovered.size() +  " device(s) found");
-            }
+    public static void main(String[] args) throws IOException {
+        RemoteDevice[] rdList = LocalDevice.getLocalDevice().getDiscoveryAgent().retrieveDevices(DiscoveryAgent.PREKNOWN);
+        for (int i=0; i<rdList.length; i++){
+            System.out.println(rdList[i].getBluetoothAddress());
+            System.out.println(rdList[i].getFriendlyName(true));
         }
     }
-
 }
