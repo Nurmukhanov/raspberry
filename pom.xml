@@ -10,19 +10,19 @@
 
     <dependencies>
         <dependency>
-            <groupId>brains</groupId>
+            <groupId>net.sf.bluecove</groupId>
             <artifactId>bluecove</artifactId>
             <version>2.1.0</version>
-            <scope>system</scope>
-            <systemPath>/home/pi/temp/bluecove/target/bluecove-2.1.0.jar</systemPath>
+            <!--<scope>system</scope>-->
+            <!--<systemPath>/home/pi/temp/bluecove/target/bluecove-2.1.0.jar</systemPath>-->
         </dependency>
         <!-- https://mvnrepository.com/artifact/net.sf.bluecove/bluecove-gpl -->
         <dependency>
-            <groupId>brains</groupId>
+            <groupId>net.sf.bluecove</groupId>
             <artifactId>bluecove-gpl</artifactId>
             <version>2.1.0</version>
-            <scope>system</scope>
-            <systemPath>/home/pi/temp/bluecove/target/bluecove-gpl-2.1.0.jar</systemPath>
+            <!--<scope>system</scope>-->
+            <!--<systemPath>/home/pi/temp/bluecove/target/bluecove-gpl-2.1.0.jar</systemPath>-->
         </dependency>
     </dependencies>
     <build>

@@ -11,23 +11,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library name="Maven: brains:bluecove:2.1.0">
-        <CLASSES>
-          <root url="jar:///home/pi/temp/bluecove/target/bluecove-2.1.0.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="Maven: brains:bluecove-gpl:2.1.0">
-        <CLASSES>
-          <root url="jar:///home/pi/temp/bluecove/target/bluecove-gpl-2.1.0.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
+    <orderEntry type="library" name="Maven: net.sf.bluecove:bluecove:2.1.0" level="project" />
+    <orderEntry type="library" name="Maven: net.sf.bluecove:bluecove-gpl:2.1.0" level="project" />
   </component>
 </module>
